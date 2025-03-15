@@ -1,1 +1,15 @@
+# Directories
 trbot-env/
+logs/
+__pycache__/
+
+# Previous files
+bot.py
+trbot.py
+sentiment.py
+
+# Models and scalers
+lstm_model.pth
+lstm_scaler.joblib
+scaler.pkl
+trading_agent.pth
