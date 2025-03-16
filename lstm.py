@@ -93,7 +93,8 @@ def train_lstm(prices, highs, lows):
     # Save scaler
     joblib.dump(scaler, "lstm_scaler.joblib")
     # Convert to tensors
-    X_train, Y_train = torch.tensor(X, dtype=torch.float32), torch.tensor(Y, dtype=torch.float32)
+    X_train = torch.tensor(X, dtype=torch.float32)
+    Y_train = torch.tensor(Y, dtype=torch.float32)
 
     dataset = TensorDataset(X_train, Y_train)
     dataloader = DataLoader(dataset, batch_size=16, shuffle=True)
